@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using GlueNet.GLFW;
 using GlueNet.OpenGL;
 
@@ -38,6 +39,7 @@ namespace GlueNet
         {
             IsAlive = false;
             __TerminateGlfw();
+            Thread.Sleep(1500); //Give Glfw some time to terminate.
         }
 
         /// <summary>

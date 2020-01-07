@@ -7,7 +7,7 @@
     <ProjectGuid>{3511DDA0-2997-4B52-8B1C-55C0A5C8FF87}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Hello_Mesh</RootNamespace>
-    <AssemblyName>Hello_Triangle</AssemblyName>
+    <AssemblyName>Hello_Mesh</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,6 +42,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="demo\Hello_mesh.gif" />
     <Content Include="glfw3.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
