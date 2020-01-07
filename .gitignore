@@ -11,7 +11,7 @@
 *.sln.docstates
 *.dll
 /Debug/*
-/Samples/*
+/Samples/WIP/*
 /x64/*
 /glfw/*
 /freetype/*

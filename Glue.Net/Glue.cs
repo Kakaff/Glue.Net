@@ -59,6 +59,15 @@ namespace GlueNet
             return true;
         }
 
+        public static bool InitGL(GLFW_Window window)
+        {
+            Gl.Init(window);
+            IsAlive = true;
+            IsInitialized = true;
+            return true;
+            
+        }
+
         static void __NativeGlfwErrorCallback(int err, string errmsg)
         {
             __onGlfwError?.Invoke((glfwError)err, errmsg);
