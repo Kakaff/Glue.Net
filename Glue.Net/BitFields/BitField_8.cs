@@ -10,15 +10,18 @@ namespace GlueNet.BitFields
 
         public bool this[int index]
         {
-            get => ((Value >> index) & 0x01) == 0x01;
-            set => Value = value ? Value |= (byte)(0x01 << index) : Value &= (byte)(0xFF ^ (0x01 << index));
+            get => ((Value >> index) & 0x01u) == 0x01u;
+            set => Value ^= (byte)((-Convert.ToInt32(value) ^ Value) & (0x01u << index));
         }
 
-        public static explicit operator BitField_8 (in byte b)
+
+        public override string ToString()
         {
-            BitField_8 bf = new BitField_8();
-            bf.Value = b;
-            return bf;
+            return Convert.ToString(Value, 2).PadLeft(8, '0');
         }
+
+        public BitField_8(byte b) { Value = b; }
+
+        public static explicit operator BitField_8 (in byte b) => new BitField_8(b);
     }
 }

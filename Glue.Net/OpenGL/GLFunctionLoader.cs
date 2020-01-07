@@ -21,7 +21,6 @@ namespace GlueNet.OpenGL
             IntPtr ptr = Glfw.GetProcAddress(name);
             if (ptr == IntPtr.Zero)
             {
-                //Log a warning, because we check if the version/definition that defines the function is supported before we get here. So the GPU bloody well should support it.
                 Console.WriteLine($"GLFunctionLoader Error: {name} not found");
                 return null;
             }
