@@ -1,11 +1,9 @@
 # Glue.Net
 
 ## What it is
-A C# OpenGL Function Loader and Glfw Wrapper. And some minor freetype usability.
+A x64 Net.Standard 2.0 OpenGL Function Loader and Glfw Wrapper. With some minor Freetype functionality.
 
 ## What it isn't
-Feature complete, I've only tested it with a handfull gl core functions.
-
-Use at your own risk, application crashes are likely.
+Done, Properly commented nor is it fully tested.
 
 
