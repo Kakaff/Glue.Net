@@ -94,9 +94,6 @@ namespace Hello_Mesh
 
             while (!window.ShouldClose())
             {
-                Glfw.PollEvents();
-                window.SwapBuffers();
-
                 GL.glClear(GL.GL_COLOR_BUFFER_BIT | GL.GL_DEPTH_BUFFER_BIT); //Clear the color and depth buffers.
                 GL.glUniformMatrix4fv(transLoc, true,
                     Matrix4x4.CreateScaleMatrix(new Vector3(1,1,1)) *
@@ -110,6 +107,9 @@ namespace Hello_Mesh
                 Thread.Sleep(13); // ~75fps. But due to how Thread.Sleep works we will more likely see 50-60fps.
                 t += 0.013f;
                 t %= 1f;
+                
+                window.SwapBuffers();
+                Glfw.PollEvents();
             }
 
             Glue.Terminate(); //Terminate Glue, which in turn terminates GLFW.
